@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import profileImg from "@/assets/profile.jpg";
+import Profile from "../../assets/ProfessionalPhoto1.png";
 
 const Hero = () => {
   const [introComplete, setIntroComplete] = useState(false);
@@ -11,7 +11,10 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
       <AnimatePresence>
         {!introComplete && (
           <motion.div
@@ -23,7 +26,7 @@ const Hero = () => {
             className="absolute inset-0 flex items-center justify-center z-10"
           >
             <h1 className="font-display text-6xl md:text-8xl font-bold text-foreground text-glow">
-              Your Name
+              Ojaswini Volukula
             </h1>
           </motion.div>
         )}
@@ -48,10 +51,10 @@ const Hero = () => {
             </p>
             <h1 className="font-display text-5xl md:text-7xl font-bold text-foreground leading-tight mb-6">
               Hi, I'm{" "}
-              <span className="text-primary text-glow">Your Name</span>
+              <span className="text-primary text-glow">Ojaswini Volukula</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-lg">
-              Full Stack Developer | Problem Solver | Tech Enthusiast
+              Full Stack Web Developer | Tech Enthusiast
             </p>
           </motion.div>
 
@@ -65,7 +68,7 @@ const Hero = () => {
             <div className="animate-float">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-glow animate-glow-pulse">
                 <img
-                  src={profileImg}
+                  src={Profile}
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />

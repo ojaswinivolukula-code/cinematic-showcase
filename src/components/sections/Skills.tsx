@@ -1,37 +1,56 @@
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaNodeJs,
+  FaJava,
+} from "react-icons/fa";
+
+import {
+  SiExpress,
+  SiTailwindcss,
+  SiSupabase,
+  SiPostgresql,
+} from "react-icons/si";
+import { SiC } from "react-icons/si";
+
 
 const categories = [
   {
     title: "FRONTEND",
     skills: [
-      { name: "React", icon: "⚛️" },
-      { name: "TypeScript", icon: "🔷" },
-      { name: "Next.js", icon: "▲" },
-      { name: "Tailwind", icon: "🎨" },
-      { name: "Vue.js", icon: "💚" },
+      { name: "HTML", icon: FaHtml5 },
+      { name: "CSS", icon: FaCss3Alt },
+      { name: "JavaScript", icon: FaJs },
+      { name: "React", icon: FaReact },
+      { name: "Tailwind CSS", icon: SiTailwindcss },
     ],
   },
   {
     title: "BACKEND",
     skills: [
-      { name: "Node.js", icon: "🟢" },
-      { name: "Python", icon: "🐍" },
-      { name: "Express", icon: "⚡" },
-      { name: "GraphQL", icon: "◈" },
-      { name: "REST API", icon: "🔗" },
+      { name: "Node.js", icon: FaNodeJs },
+      { name: "Express.js", icon: SiExpress },
     ],
   },
   {
     title: "DATABASE",
     skills: [
-      { name: "PostgreSQL", icon: "🐘" },
-      { name: "MongoDB", icon: "🍃" },
-      { name: "Redis", icon: "🔴" },
-      { name: "Firebase", icon: "🔥" },
-      { name: "Supabase", icon: "⚡" },
+      { name: "Supabase", icon: SiSupabase },
+      { name: "PostgreSQL ", icon: SiPostgresql },
     ],
   },
+  {
+  title: "PROGRAMMING",
+  skills: [
+    { name: "Java", icon: FaJava },
+    { name: "C", icon: SiC },
+  ],
+},
+
 ];
 
 const Skills = () => {
@@ -55,7 +74,8 @@ const Skills = () => {
             My Skills
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground">
-            Technologies I <span className="text-primary text-glow-subtle">work with</span>
+            Technologies I{" "}
+            <span className="text-primary text-glow-subtle">work with</span>
           </h2>
         </motion.div>
 
@@ -101,22 +121,25 @@ const SkillRow = ({
       </motion.h3>
 
       <motion.div style={{ x }} className="flex flex-wrap gap-4">
-        {category.skills.map((skill, i) => (
-          <motion.div
-            key={skill.name}
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={inView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.4, delay: index * 0.15 + i * 0.08 }}
-            className="flex items-center gap-3 px-5 py-3 rounded-xl bg-card border border-border hover:border-glow hover:scale-105 transition-all duration-300 cursor-default group"
-          >
-            <span className="text-xl group-hover:scale-110 transition-transform">
-              {skill.icon}
-            </span>
-            <span className="font-display text-sm font-medium text-foreground">
-              {skill.name}
-            </span>
-          </motion.div>
-        ))}
+        {category.skills.map((skill, i) => {
+          const Icon = skill.icon;
+
+          return (
+            <motion.div
+              key={skill.name}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={inView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ duration: 0.4, delay: index * 0.15 + i * 0.08 }}
+              className="flex items-center justify-center gap-3 px-5 py-3 min-h-[48px] rounded-xl bg-card border border-border hover:border-glow hover:scale-105 transition-all duration-300 cursor-default group"
+            >
+              <Icon className="text-xl relative -top-[1px] group-hover:scale-110 transition-transform" />
+
+              <span className="font-display text-sm font-medium text-foreground">
+                {skill.name}
+              </span>
+            </motion.div>
+          );
+        })}
       </motion.div>
     </div>
   );

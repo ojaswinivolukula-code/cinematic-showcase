@@ -3,11 +3,27 @@ import { useRef } from "react";
 import { Phone, Mail, Linkedin, Github } from "lucide-react";
 
 const contacts = [
-  { icon: Phone, label: "+1 (555) 123-4567", href: "tel:+15551234567" },
-  { icon: Mail, label: "hello@yourname.dev", href: "mailto:hello@yourname.dev" },
-  { icon: Linkedin, label: "linkedin.com/in/yourname", href: "https://linkedin.com" },
-  { icon: Github, label: "github.com/yourname", href: "https://github.com" },
+  { icon: Phone, label: "9989068182", href: "tel:9989068182" },
+
+  { 
+    icon: Mail, 
+    label: "ojaswini.volukula@gmail.com", 
+    href: "mailto:ojaswini.volukula@gmail.com" 
+  },
+
+  { 
+    icon: Linkedin, 
+    label: "linkedin.com/in/ojaswini-volukula-3ab065327", 
+    href: "https://www.linkedin.com/in/ojaswini-volukula-3ab065327" 
+  },
+
+  { 
+    icon: Github, 
+    label: "github.com/ojaswinivolukula-code", 
+    href: "https://github.com/ojaswinivolukula-code" 
+  },
 ];
+
 
 const Contact = () => {
   const ref = useRef(null);
@@ -58,7 +74,7 @@ const Contact = () => {
           className="mt-32 pt-8 border-t border-border text-center"
         >
           <p className="text-sm text-muted-foreground">
-            © 2026 Your Name. Built with passion.
+            © 2026 Ojaswini Volukula. Built with passion.
           </p>
         </motion.div>
       </div>
