@@ -1,12 +1,23 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import ParticleBackground from "@/components/ui/ParticleBackground";
+import Navbar from "@/components/ui/Navbar";
+import ScrollToTop from "@/components/ui/ScrollToTop";
+import Hero from "@/components/sections/Hero";
+import About from "@/components/sections/About";
+import Skills from "@/components/sections/Skills";
+import Projects from "@/components/sections/Projects";
+import Contact from "@/components/sections/Contact";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="relative min-h-screen">
+      <ParticleBackground />
+      <Navbar />
+      <Hero />
+      <About />
+      <Skills />
+      <Projects />
+      <Contact />
+      <ScrollToTop />
     </div>
   );
 };
