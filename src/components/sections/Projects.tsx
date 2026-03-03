@@ -129,14 +129,14 @@ const Projects = () => {
                 initial={{ y: "100%" }}
                 whileHover={{ y: 0 }}
                 transition={{ duration: 0.3 }}
-                className="absolute bottom-0 left-0 right-0 glassmorphism p-6"
+                className="absolute bottom-0 left-0 right-0 glassmorphism p-6 bg-black/80 backdrop-blur-sm"
               >
                 {/* Description Points */}
                 <ul className="mb-4 space-y-1.5">
                   {projects[activeIdx].description.map((point, i) => (
                     <li
                       key={i}
-                      className="text-xs text-muted-foreground flex items-start gap-2 leading-relaxed"
+                      className="text-xs text-white/80 flex items-start gap-2 leading-relaxed"
                     >
                       <span className="text-primary mt-0.5 shrink-0">▸</span>
                       {point}
@@ -174,7 +174,7 @@ const Projects = () => {
                     href={projects[activeIdx].live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm text-foreground hover:text-primary transition-colors"
+                    className="flex items-center gap-2 text-sm text-white hover:text-primary transition-colors"
                   >
                     <ExternalLink size={14} /> Live Demo
                   </a>
@@ -182,7 +182,7 @@ const Projects = () => {
                     href={projects[activeIdx].github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm text-foreground hover:text-primary transition-colors"
+                    className="flex items-center gap-2 text-sm text-white hover:text-primary transition-colors"
                   >
                     <GithubIcon /> GitHub
                   </a>
