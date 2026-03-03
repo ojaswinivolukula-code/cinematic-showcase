@@ -110,7 +110,8 @@ const SkillRow = ({
   const x = useTransform(scrollProgress, [0, 1], [0, direction * 30]);
 
   return (
-    <div className="flex flex-col md:flex-row items-start md:items-center gap-8">
+    <div className="grid md:grid-cols-[200px_1fr] gap-8 items-start md:items-center">
+
       <motion.h3
         initial={{ opacity: 0, x: -30 }}
         animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -130,11 +131,11 @@ const SkillRow = ({
               initial={{ opacity: 0, scale: 0.8 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.4, delay: index * 0.15 + i * 0.08 }}
-              className="flex items-center justify-center gap-3 px-5 py-3 min-h-[48px] rounded-xl bg-card border border-border hover:border-glow hover:scale-105 transition-all duration-300 cursor-default group"
-            >
+              className="flex items-center justify-center gap-3 h-[55px] w-[220px] rounded-xl bg-card border border-border hover:border-glow hover:scale-105 transition-all duration-300 cursor-default group"
+>
               <Icon className="text-xl relative -top-[1px] group-hover:scale-110 transition-transform" />
 
-              <span className="font-display text-sm font-medium text-foreground">
+              <span className="font-display text-2xl font-bold text-muted-foreground min-w-[180px] shrink-0">
                 {skill.name}
               </span>
             </motion.div>
