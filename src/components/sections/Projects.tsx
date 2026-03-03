@@ -36,6 +36,7 @@ const GithubIcon = () => (
 
 const Projects = () => {
   const [activeIdx, setActiveIdx] = useState(0);
+  const [hovered, setHovered] = useState(false);
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -106,7 +107,11 @@ const Projects = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="md:w-3/5 relative"
           >
-            <div className="relative rounded-2xl overflow-hidden border border-border hover:border-glow transition-all duration-300 group">
+            <div
+              className="relative rounded-2xl overflow-hidden border border-border hover:border-glow transition-all duration-300 group"
+              onMouseEnter={() => setHovered(true)}
+              onMouseLeave={() => setHovered(false)}
+            >
               <div className="relative overflow-hidden aspect-video">
                 {projects.map((p, i) => (
                   <motion.img
@@ -126,8 +131,8 @@ const Projects = () => {
 
               {/* Overlay */}
               <motion.div
+                animate={{ y: hovered ? 0 : "100%" }}
                 initial={{ y: "100%" }}
-                whileHover={{ y: 0 }}
                 transition={{ duration: 0.3 }}
                 className="absolute bottom-0 left-0 right-0 glassmorphism p-6 bg-black/80 backdrop-blur-sm"
               >
