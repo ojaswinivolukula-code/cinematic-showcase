@@ -28,8 +28,8 @@ const projects = [
     image: project3,
     tech: ["Verilog HDL", "Xilinx Vivado", "AES-128"],
     styling: ["Hardware Security"],
-    live: "",
-    github: "",
+    live: null,
+    github: null,
     description: [
       "Implemented AES-128 encryption and decryption",
       "Designed SDRR architecture for side-channel protection",
@@ -44,8 +44,8 @@ const projects = [
     image: project2,
     tech: ["Python", "Pandas", "Streamlit", "SQL"],
     styling: ["Matplotlib"],
-    live: "",
-    github: "",
+    live: null,
+    github: null,
     description: [
       "Analyzed student academic performance using Python",
       "Created interactive dashboard with filters and charts",
