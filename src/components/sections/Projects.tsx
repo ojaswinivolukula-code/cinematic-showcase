@@ -12,7 +12,8 @@ const projects = [
     tech: ["React", "Node.js", "Express"],
     styling: ["Tailwind CSS", "shadcn/ui"],
     live: "https://travelinspirationapp.netlify.app/",
-    github: "https://github.com/ojaswinivolukula-code/Travel-Inspiration-Frontend",
+    github:
+      "https://github.com/ojaswinivolukula-code/Travel-Inspiration-Frontend",
     description: [
       "Personalized destination recommendations",
       "Interactive trip planner",
@@ -53,8 +54,6 @@ const projects = [
       "Displayed top-performing students and trends",
     ],
   },
-
-  
 ];
 
 const GithubIcon = () => (
@@ -88,7 +87,8 @@ const Projects = () => {
             Selected Projects
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground">
-            Things I've <span className="text-primary text-glow-subtle">built</span>
+            Things I've{" "}
+            <span className="text-primary text-glow-subtle">built</span>
           </h2>
         </motion.div>
 
@@ -113,14 +113,18 @@ const Projects = () => {
               >
                 <span
                   className={`font-display text-2xl font-bold transition-colors ${
-                    activeIdx === i ? "text-primary text-glow-subtle" : "text-muted-foreground"
+                    activeIdx === i
+                      ? "text-primary text-glow-subtle"
+                      : "text-muted-foreground"
                   }`}
                 >
                   0{i + 1}
                 </span>
                 <span
                   className={`font-display text-lg font-semibold transition-colors ${
-                    activeIdx === i ? "text-foreground" : "text-muted-foreground"
+                    activeIdx === i
+                      ? "text-foreground"
+                      : "text-muted-foreground"
                   }`}
                 >
                   {p.name}
@@ -209,31 +213,31 @@ const Projects = () => {
                 </div>
 
                 {/* Links */}
-             <div className="flex gap-4">
-  {projects[activeIdx].live && (
-    <a
-      href={projects[activeIdx].live}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center gap-2 text-sm text-white hover:text-primary transition-colors"
-    >
-      <ExternalLink size={14} />
-      Live Demo
-    </a>
-  )}
+                <div className="flex gap-4">
+                  {projects[activeIdx].live && (
+                    <a
+                      href={projects[activeIdx].live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-sm text-white hover:text-primary transition-colors"
+                    >
+                      <ExternalLink size={14} />
+                      Live Demo
+                    </a>
+                  )}
 
-  {projects[activeIdx].github && (
-    <a
-      href={projects[activeIdx].github}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center gap-2 text-sm text-white hover:text-primary transition-colors"
-    >
-      <GithubIcon />
-      GitHub
-    </a>
-  )}
-</div>
+                  {projects[activeIdx].github && (
+                    <a
+                      href={projects[activeIdx].github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-sm text-white hover:text-primary transition-colors"
+                    >
+                      <GithubIcon />
+                      GitHub
+                    </a>
+                  )}
+                </div>
               </motion.div>
             </div>
           </motion.div>
