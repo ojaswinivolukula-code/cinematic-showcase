@@ -54,7 +54,7 @@ const Hero = () => {
               <span className="text-primary text-glow">Ojaswini Volukula</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-lg">
-              Full Stack Web Developer | Tech Enthusiast
+              Full Stack Web Developer | Tech Enthusiast | Aspiring Data Analyst
             </p>
           </motion.div>
 

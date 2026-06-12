@@ -2,7 +2,8 @@ import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import project1 from "@/assets/project1.jpg";
-
+import project2 from "@/assets/student-dashboard.jpg";
+import project3 from "@/assets/sddr-project.jpg";
 
 const projects = [
   {
@@ -13,13 +14,47 @@ const projects = [
     live: "https://travelinspirationapp.netlify.app/",
     github: "https://github.com/ojaswinivolukula-code/Travel-Inspiration-Frontend",
     description: [
-      "Personalized destination recommendations based on user travel preferences like adventure, culture & relaxation",
-      "Interactive trip planner with multi-destination itinerary builder and route planning",
-      "Budget estimator covering flights, accommodations, food & activities for cost comparison",
-      "Destination filters by climate, season, cultural events and off-the-beaten-path spots",
-      "Digital travel journal with photo uploads, trip notes and social sharing",
+      "Personalized destination recommendations",
+      "Interactive trip planner",
+      "Budget estimator",
+      "Destination filtering",
+      "Digital travel journal",
     ],
   },
+
+  {
+    name: "Secure Double Rate Registers Against Power Analysis Attacks",
+    image: project3,
+    tech: ["Verilog HDL", "Xilinx Vivado", "AES-128"],
+    styling: ["Hardware Security"],
+    live: "",
+    github: "",
+    description: [
+      "Implemented AES-128 encryption and decryption",
+      "Designed SDRR architecture for side-channel protection",
+      "Reduced power analysis leakage",
+      "Validated using NIST AES test vectors",
+      "Simulated and verified in Xilinx Vivado",
+    ],
+  },
+
+  {
+    name: "Student Performance Analytics Dashboard",
+    image: project2,
+    tech: ["Python", "Pandas", "Streamlit", "SQL"],
+    styling: ["Matplotlib"],
+    live: "",
+    github: "",
+    description: [
+      "Analyzed student academic performance using Python",
+      "Created interactive dashboard with filters and charts",
+      "Performed data cleaning and visualization",
+      "Generated insights on attendance and scores",
+      "Displayed top-performing students and trends",
+    ],
+  },
+
+  
 ];
 
 const GithubIcon = () => (
@@ -174,24 +209,31 @@ const Projects = () => {
                 </div>
 
                 {/* Links */}
-                <div className="flex gap-4">
-                  <a
-                    href={projects[activeIdx].live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm text-white hover:text-primary transition-colors"
-                  >
-                    <ExternalLink size={14} /> Live Demo
-                  </a>
-                  <a
-                    href={projects[activeIdx].github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm text-white hover:text-primary transition-colors"
-                  >
-                    <GithubIcon /> GitHub
-                  </a>
-                </div>
+             <div className="flex gap-4">
+  {projects[activeIdx].live && (
+    <a
+      href={projects[activeIdx].live}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-2 text-sm text-white hover:text-primary transition-colors"
+    >
+      <ExternalLink size={14} />
+      Live Demo
+    </a>
+  )}
+
+  {projects[activeIdx].github && (
+    <a
+      href={projects[activeIdx].github}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-2 text-sm text-white hover:text-primary transition-colors"
+    >
+      <GithubIcon />
+      GitHub
+    </a>
+  )}
+</div>
               </motion.div>
             </div>
           </motion.div>

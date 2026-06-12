@@ -7,6 +7,8 @@ import {
   FaReact,
   FaNodeJs,
   FaJava,
+  FaPython,
+  FaDatabase,
 } from "react-icons/fa";
 
 import {
@@ -14,9 +16,11 @@ import {
   SiTailwindcss,
   SiSupabase,
   SiPostgresql,
+  SiMysql,
+  SiC,
+  SiGithub,
+  SiPostman,
 } from "react-icons/si";
-import { SiC } from "react-icons/si";
-
 
 const categories = [
   {
@@ -46,8 +50,17 @@ const categories = [
   {
   title: "PROGRAMMING",
   skills: [
+    { name: "Python", icon: FaPython },
     { name: "Java", icon: FaJava },
     { name: "C", icon: SiC },
+    { name: "SQL", icon: FaDatabase },
+  ],
+},
+{
+  title: "TOOLS",
+  skills: [
+    { name: "GitHub", icon: SiGithub },
+    { name: "Postman", icon: SiPostman },
   ],
 },
 

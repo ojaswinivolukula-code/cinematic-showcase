@@ -25,8 +25,7 @@ const About = () => {
             <span className="text-primary text-glow-subtle">digital experiences</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mb-16 leading-relaxed">
-            Innovative Full Stack Web Developer with expertise in front-end and back-end development, RESTful APIs, and database management. Experienced in designing scalable, secure, and responsive web applications. Strong analytical, problem-solving, and collaboration skills with a focus on clean code, performance optimization, and delivering high-quality solutions.
-          </p>
+Aspiring Data Analyst and Full Stack Web Developer with foundational knowledge in Python, SQL, React, and Node.js. Familiar with building responsive web applications, working with databases, and problem-solving using basic data structures and algorithms. Eager to apply analytical and technical skills in entry-level IT and data-focused roles while continuously learning and gaining hands-on experience.          </p>
         </motion.div>
 
       
